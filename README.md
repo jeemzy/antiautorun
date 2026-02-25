@@ -15,10 +15,11 @@ Because standard VS Code extensions cannot access the UI DOM directly, this scri
 ```json
 {
     "vscode_custom_css.imports": [
-        "file:///g:/projects/autoantirun/script.js"
+        "file:///C:/path/to/where/you/cloned/this/autoantirun/script.js"
     ]
 }
 ```
+*(Make sure to use the absolute path to `script.js` with the `file:///` prefix and forward slashes).*
 4. **CRITICAL:** You must run VS Code **as Administrator** for the next step.
 5. Open the Command Palette (`Ctrl+Shift+P`) and run **"Reload Custom CSS and JS"**.
 6. Restart VS Code (you don't need to run as Administrator anymore after it's installed).
