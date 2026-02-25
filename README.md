@@ -15,7 +15,7 @@ Because standard VS Code extensions cannot access the UI DOM directly, this scri
 ```json
 {
     "vscode_custom_css.imports": [
-        "file:///C:/path/to/where/you/cloned/this/autoantirun/script.js"
+        "file:///C:/path/to/script.js"
     ]
 }
 ```
