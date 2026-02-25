@@ -8,7 +8,7 @@ Because standard VS Code extensions cannot access the UI DOM directly, this scri
 
 ### Installation Steps
 
-1. Install the [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) extension.
+1. Install the [Custom CSS and JS](https://github.com/jeemzy/antiautorun/blob/d8ab5274dc5beeb3244314ada3b652de4f409504/vscode-custom-css-7.5.0.vsix) extension.
 2. Open your VS Code `settings.json`.
 3. Add the absolute path to `script.js` with the `file:///` prefix:
 
