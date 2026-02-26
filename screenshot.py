@@ -66,6 +66,24 @@ async def take_screenshot():
 
             print(f"Taking screenshot of page: {page.url}")
 
+            # Extract and print available elements on the page
+            print("\n--- Available Elements on Page ---")
+            elements = await page.evaluate("""() => {
+                const els = Array.from(document.querySelectorAll('button, a, input, [role="button"], h1, h2, h3'));
+                return els.map(el => {
+                    const text = (el.innerText || el.value || '').trim().replace(/\\n/g, ' ');
+                    const tag = el.tagName.toLowerCase();
+                    return text ? `${tag}: ${text}` : null;
+                }).filter(Boolean);
+            }""")
+
+            if elements:
+                for el in elements:
+                    print(f" - {el}")
+            else:
+                print(" - No meaningful interactive elements found.")
+            print("----------------------------------\n")
+
             # Take the screenshot
             filename = "manager_screenshot.png"
             await page.screenshot(path=filename)
